@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace IceAndFire
 {
@@ -44,6 +45,13 @@ namespace IceAndFire
 			Console.Write(text);
 			for (int i = text.Length; i < width; ++i)
 				Console.Write(' ');
+		}
+
+		public static string DoEditField(string prompt, string value)
+		{
+			Console.Write("{0}: ", prompt);
+			SendKeys.SendWait(value);
+			return Console.ReadLine();
 		}
 	}
 }
