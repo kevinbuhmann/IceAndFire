@@ -27,6 +27,17 @@ namespace IceAndFire
 			}
 		}
 
+		public static object ExecuteScalar(string sqlQuery)
+		{
+			string connectionString = string.Format("Data Source={0};Version=3;", SQLiteDataUtility.DatabaseFilename);
+			using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+			{
+				connection.Open();
+				using (SQLiteCommand command = new SQLiteCommand(sqlQuery, connection))
+					return command.ExecuteScalar();
+			}
+		}
+
 		public static void ExecuteCommand(string sqlCommand)
 		{
 			string connectionString = string.Format("Data Source={0};Version=3;", SQLiteDataUtility.DatabaseFilename);
