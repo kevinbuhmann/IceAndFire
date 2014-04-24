@@ -53,7 +53,6 @@ namespace IceAndFire
 
 		private static void WriteLogo()
 		{
-
 			ConsoleExtensions.WriteCentered(" A Database of Ice and Fire ", '-');
 			ConsoleExtensions.WriteCentered("by Kevin Phelps, Leo Tanoue, Kirk Tolleshaug, and Dylan Stark", '-');
 			Console.WriteLine();
