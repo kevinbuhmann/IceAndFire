@@ -32,7 +32,7 @@ namespace IceAndFire
 				Console.WriteLine("-- Type exit to quit.");
 				Console.WriteLine();
 				Console.Write("Enter choice: ");
-				string choice = Console.ReadLine();
+				string choice = ConsoleExtensions.ReadLine();
 				switch (choice)
 				{
 					case "1":
@@ -75,7 +75,7 @@ namespace IceAndFire
 
 			// get name pattern
 			Console.Write("Enter character name pattern: ");
-			string namePattern = Console.ReadLine();
+			string namePattern = ConsoleExtensions.ReadLine();
 			Console.WriteLine();
 
 			// query for characters
@@ -126,7 +126,7 @@ namespace IceAndFire
 
 			// get name pattern
 			Console.Write("Enter character id (or exit if you need to look it up): ");
-			string characterIDStr = Console.ReadLine();
+			string characterIDStr = ConsoleExtensions.ReadLine();
 			Console.WriteLine();
 
 			if (characterIDStr != "exit")
