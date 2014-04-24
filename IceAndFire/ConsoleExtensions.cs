@@ -47,11 +47,27 @@ namespace IceAndFire
 				Console.Write(' ');
 		}
 
+		private static string ReadLine()
+		{
+			// set colors
+			Console.BackgroundColor = ConsoleColor.White;
+			Console.ForegroundColor = ConsoleColor.Black;
+
+			// read the line
+			string line = Console.ReadLine();
+
+			// reset colors
+			Console.ResetColor();
+
+			// return the entered value
+			return line;
+		}
+
 		public static string DoEditField(string prompt, string value)
 		{
 			Console.Write("{0}: ", prompt);
 			SendKeys.SendWait(value);
-			return Console.ReadLine();
+			return ConsoleExtensions.ReadLine();
 		}
 	}
 }
