@@ -28,6 +28,7 @@ namespace IceAndFire
 				Program.WriteLogo();
 				Console.WriteLine("Select an option:");
 				Console.WriteLine("1. Look up character.");
+				Console.WriteLine("1. Look up house.");
 				Console.WriteLine("-- Type exit to quit.");
 				Console.WriteLine();
 				Console.Write("Enter choice: ");
@@ -36,6 +37,9 @@ namespace IceAndFire
 				{
 					case "1":
 						Program.LookUpCharacter();
+						break;
+					case "2":
+						Program.LookUpHouse();
 						break;
 					case "exit":
 						return;
@@ -103,6 +107,10 @@ namespace IceAndFire
 				ConsoleExtensions.WritePadded(characterRow["Organization"].ToString(), 20);
 				ConsoleExtensions.WritePadded(characterRow["HouseName"].ToString(), 20);
 			}
+		}
+
+		private static void LookUpHouse()
+		{
 		}
 	}
 }
