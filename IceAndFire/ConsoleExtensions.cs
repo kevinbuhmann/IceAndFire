@@ -47,7 +47,7 @@ namespace IceAndFire
 				Console.Write(' ');
 		}
 
-		private static string ReadLine()
+		public static string ReadLine()
 		{
 			// set colors
 			Console.BackgroundColor = ConsoleColor.White;
