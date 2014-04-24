@@ -35,7 +35,7 @@ namespace IceAndFire
 				switch (choice)
 				{
 					case "1":
-						Program.LookUpCharacer();
+						Program.LookUpCharacter();
 						break;
 					case "exit":
 						return;
@@ -59,7 +59,7 @@ namespace IceAndFire
 			Console.WriteLine();
 		}
 
-		private static void LookUpCharacer()
+		private static void LookUpCharacter()
 		{
 			// write info
 			Console.Clear();
