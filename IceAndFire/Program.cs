@@ -28,7 +28,7 @@ namespace IceAndFire
 				Program.WriteLogo();
 				Console.WriteLine("Select an option:");
 				Console.WriteLine("1. Look up character.");
-				Console.WriteLine("1. Look up house.");
+				Console.WriteLine("2. Look up house.");
 				Console.WriteLine("-- Type exit to quit.");
 				Console.WriteLine();
 				Console.Write("Enter choice: ");
