@@ -75,13 +75,13 @@ namespace IceAndFire
 
 			// get name pattern
 			Console.Write("Enter character name pattern: ");
-			string namePattern = ConsoleExtensions.ReadLine();
+			string characterNamePattern = ConsoleExtensions.ReadLine();
 			Console.WriteLine();
 
 			// query for characters
-			string nameQuery = "SELECT * FROM Character JOIN House ON Character.HouseID=House.HouseID " +
-							   "WHERE (IFNULL(FirstName,'') || IFNULL(MiddleName,'') || IFNULL(LastName,'')) LIKE '%" + namePattern + "%';";
-			DataTable characterTable = SQLiteDataUtility.ExecuteQuery(nameQuery);
+			string characterNameQuery = "SELECT * FROM Character JOIN House ON Character.HouseID=House.HouseID " +
+										"WHERE (IFNULL(FirstName,'') || IFNULL(MiddleName,'') || IFNULL(LastName,'')) LIKE '%" + characterNamePattern + "%';";
+			DataTable characterTable = SQLiteDataUtility.ExecuteQuery(characterNameQuery);
 			
 			// write table header
 			Console.WriteLine("{0} character(s) found:", characterTable.Rows.Count);
