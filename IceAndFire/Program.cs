@@ -7,9 +7,9 @@ namespace IceAndFire
 {
 	public class Program
 	{
-		public static void Main(string[] args)
-		{
-			// set up console
+		public static void Main (string[] args)
+        {
+            // set up console
 			Console.Title = "A Database of Ice and Fire";
 			Console.WindowWidth = 150;
 			Program.WriteLogo();
@@ -114,6 +114,41 @@ namespace IceAndFire
 
 		private static void LookUpHouse()
 		{
+			// write info
+			Console.Clear();
+			Program.WriteLogo();
+			ConsoleExtensions.WriteCentered("Task: Look up house");
+			Console.WriteLine();
+
+			// get name pattern
+			Console.Write("Enter house name pattern: ");
+			string houseNamePattern = ConsoleExtensions.ReadLine();
+			Console.WriteLine();
+
+			// query for characters
+			string houseNameQuery = "SELECT * FROM House JOIN Location ON House.LocID=Location.LocID " +
+									"WHERE HouseName LIKE '%" + houseNamePattern + "%';";
+			DataTable houseTable = SQLiteDataUtility.ExecuteQuery(houseNameQuery);
+			
+			// write table header
+			Console.WriteLine("{0} house(s) found:", houseTable.Rows.Count);
+			ConsoleExtensions.WritePadded("ID", 5);
+			ConsoleExtensions.WritePadded("House Name", 25);
+			ConsoleExtensions.WritePadded("House Words", 30);
+			ConsoleExtensions.WritePadded("House Sigil", 60);
+			ConsoleExtensions.WritePadded("Location", 30);
+			for (int i = 0; i < Console.WindowWidth; ++i)
+				Console.Write('-');
+			
+			// write records
+			foreach (DataRow houseRow in houseTable.Rows)
+			{
+				ConsoleExtensions.WritePadded(houseRow["HouseID"].ToString(), 5);
+				ConsoleExtensions.WritePadded(houseRow["HouseName"].ToString(), 25);
+				ConsoleExtensions.WritePadded(houseRow["HouseWords"].ToString(), 30);
+				ConsoleExtensions.WritePadded(houseRow["HouseSigil"].ToString(), 60);
+				ConsoleExtensions.WritePadded(houseRow["LocName"].ToString(), 30);
+			}
 		}
 
 		private static void EditCharacter()
