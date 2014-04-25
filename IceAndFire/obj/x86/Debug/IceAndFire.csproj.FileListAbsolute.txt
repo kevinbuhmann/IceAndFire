@@ -8,3 +8,15 @@ C:\Users\Kevin\Dropbox\School\2014 Spring\CS 440 Database\Project\IceAndFire\Ice
 C:\Users\Kevin\Dropbox\School\2014 Spring\CS 440 Database\Project\IceAndFire\IceAndFire\obj\x86\Debug\IceAndFire.csprojResolveAssemblyReference.cache
 C:\Users\Kevin\Dropbox\School\2014 Spring\CS 440 Database\Project\IceAndFire\IceAndFire\obj\x86\Debug\IceAndFire.exe
 C:\Users\Kevin\Dropbox\School\2014 Spring\CS 440 Database\Project\IceAndFire\IceAndFire\obj\x86\Debug\IceAndFire.pdb
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\bin\Debug\SQLite.Interop.dll
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\bin\Debug\IceAndFire.exe
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\bin\Debug\IceAndFire.pdb
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\bin\Debug\SQLite.Designer.dll
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\bin\Debug\System.Data.SQLite.dll
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\bin\Debug\SQLite.Designer.xml
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\bin\Debug\System.Data.SQLite.xml
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\bin\Debug\System.Data.SQLite.Linq.xml
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\obj\x86\Debug\IceAndFire.csprojResolveAssemblyReference.cache
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\obj\x86\Debug\IceAndFire.exe
+C:\Users\krphelps1s\Desktop\IceAndFire\IceAndFire\obj\x86\Debug\IceAndFire.pdb
