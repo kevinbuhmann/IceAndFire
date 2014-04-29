@@ -29,6 +29,7 @@ namespace IceAndFire
 				Console.WriteLine("1. Look up character.");
 				Console.WriteLine("2. Look up house.");
 				Console.WriteLine("3. Edit character.");
+				Console.WriteLine("4. Delete character.");
 				Console.WriteLine("-- Type exit to quit.");
 				Console.WriteLine();
 				Console.Write("Enter choice: ");
@@ -44,6 +45,9 @@ namespace IceAndFire
 					case "3":
 						Program.EditCharacter();
 						break;
+					case "4":
+			                        Program.deleteChar();
+			                        break;
 					case "exit":
 						return;
 					default:
@@ -252,5 +256,39 @@ namespace IceAndFire
 					Console.WriteLine("ERROR: Please enter a number or exit.");
 			}
 		}
+		
+	        protected static void deleteChar()
+	        {
+	            Console.Clear();
+	            Program.WriteLogo();
+	            ConsoleExtensions.WriteCentered("Task: Delete character");
+	            Console.WriteLine();
+	
+	            // get name pattern
+	            Console.Write("Enter character id (or exit if you need to look it up): ");
+	            string characterIDStr = ConsoleExtensions.ReadLine();
+	            Console.WriteLine();
+	
+	            if (characterIDStr != "exit")
+	            {
+	                int characterID;
+	                if (int.TryParse(characterIDStr, out characterID))
+	                {
+	                    string isCharacter = String.Format("SELECT * FROM Character WHERE CharID = {0}", characterID);
+	                    DataTable charDataTable = SQLiteDataUtility.ExecuteQuery(isCharacter);
+	                    if (charDataTable.Rows.Count != 0)
+	                    {
+	                        string DeleteQuery = String.Format("DELETE FROM Character WHERE CharID={0}", characterID);
+	                        SQLiteDataUtility.ExecuteCommand(DeleteQuery);
+	
+	                        Console.WriteLine("Character succesfully deleted.");
+	                    }
+	                    else
+	                    {
+	                        Console.WriteLine("ERROR: Character not found.");
+	                    }
+	                }
+	            }
+	        }
 	}
 }
